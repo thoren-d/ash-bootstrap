@@ -1,0 +1,21 @@
+[package]
+name = "ash-bootstrap"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["window"]
+
+window = ["raw-window-handle"]
+
+[dependencies]
+ash = "0.37.0"
+log = "0.4.16"
+thiserror = "1.0.30"
+
+raw-window-handle = { version = "0.4.2", optional = true }
+tracing = { version = "0.1.32", optional = true }
+
+[dev-dependencies]
+simple_logger = "2.1.0"
+winit = "0.26.1"
